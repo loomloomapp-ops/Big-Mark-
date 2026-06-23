@@ -370,6 +370,11 @@ a:hover > .rt-text-style-button.rt-button-color-change{ color:#fff !important; }
 /* CTA lead paragraph: two lines, 80% opacity */
 .bm-cta-lead{ color:rgba(35,34,32,.8) !important; }
 .bm-cta-lead br{ display:block; }
+/* desktop only: each sentence on its own single line (2 lines total). The text
+   column is wide enough (632px) for both sentences, but the paragraph is capped
+   at 528px — lift that cap and stop wrapping so the <br> yields exactly two lines.
+   Mobile (<=600px) keeps the flowing one-paragraph version untouched. */
+@media (min-width:601px){ .bm-cta-lead{ max-width:none !important; white-space:nowrap; } }
 @media (max-width:600px){ .bm-cta-lead br{ display:none; } }
 
 /* ===== Hero right: photo-montage at reference size (reads as video) ===== */

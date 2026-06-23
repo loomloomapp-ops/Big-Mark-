@@ -93,7 +93,10 @@ if html_tag: html_tag["lang"] = "pl"
 SITE_TITLE = "BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin"
 SITE_DESC = ("Remonty mieszkań, łazienek, układanie płytek, elektryka G1, ogrzewanie gazowe G3 "
              "i prace wykończeniowe w Lublinie i okolicach. Zostaw zgłoszenie do BIG-MARK.")
-OG_IMAGE = "assets/og-image.jpg"
+# Absolute site URL — social scrapers (FB/WhatsApp/LinkedIn) require an absolute
+# og:image URL, not a relative path. Change this to the final domain when ready.
+BASE_URL = "https://blue-gaur-285566.hostingersite.com"
+OG_IMAGE = BASE_URL + "/assets/og-image.jpg"
 if soup.title: soup.title.string = SITE_TITLE
 for m in soup.find_all("meta"):
     prop = m.get("property"); name = m.get("name")
@@ -102,12 +105,17 @@ for m in soup.find_all("meta"):
     if prop == "og:title" or name == "twitter:title":
         m["content"] = SITE_TITLE
     # brand OG/Twitter card image (was a Flampt photo / leftover CDN url)
-    if prop == "og:image" or name in ("twitter:image", "twitter:image:src"):
+    if prop in ("og:image", "og:image:secure_url") or name in ("twitter:image", "twitter:image:src"):
         m["content"] = OG_IMAGE
-# ensure the OG image dimensions + alt are present (good social previews)
+    if prop == "og:url":
+        m["content"] = BASE_URL + "/"
+# ensure OG url, image dimensions + alt are present (good social previews)
 _head_og = soup.head
 _have = {m.get("property") for m in soup.find_all("meta")}
-for _p, _c in (("og:image:width", "1200"), ("og:image:height", "630"),
+for _p, _c in (("og:url", BASE_URL + "/"),
+               ("og:image:secure_url", OG_IMAGE),
+               ("og:image:type", "image/jpeg"),
+               ("og:image:width", "1200"), ("og:image:height", "630"),
                ("og:image:alt", "BIG-MARK — Remonty mieszkań, Lublin")):
     if _p not in _have:
         _t = soup.new_tag("meta"); _t["property"] = _p; _t["content"] = _c; _head_og.append(_t)

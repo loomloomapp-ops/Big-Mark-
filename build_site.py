@@ -577,6 +577,68 @@ a:hover > .rt-text-style-button.rt-button-color-change{ color:#fff !important; }
 @media (max-width:479px){
   .rt-footer-grid-wrapper{ grid-template-columns:1fr !important; }
 }
+
+/* =====================================================================
+   PREMIUM PRELOADER — "Złoty refleks"
+   Brand intro: logo resolves from soft->sharp, a gold light sheen sweeps
+   across it (masked to the logo silhouette), a thin gold accent line draws
+   beneath, then the white panel lifts away with a rounded edge to reveal the
+   site — echoing the site's signature rounded white transition.
+   Everything is tunable via the CSS variables below.
+   ===================================================================== */
+:root{
+  --bm-pl-bg:#ffffff;                              /* preloader background        */
+  --bm-pl-accent:#E49C0C;                          /* brand gold (sheen + line)   */
+  --bm-pl-logo:190px;                              /* logo width (desktop)        */
+  --bm-pl-in:1.15s;                                /* intro / focus-resolve speed */
+  --bm-pl-exit:.85s;                               /* curtain-lift speed          */
+  --bm-pl-ease:cubic-bezier(.22,.61,.36,1);        /* intro easing                */
+  --bm-pl-min:1900;                                /* min visible time, ms (JS)   */
+}
+.bm-pl{
+  position:fixed; inset:0; z-index:100000;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--bm-pl-bg);
+  transition:transform var(--bm-pl-exit) cubic-bezier(.76,0,.24,1),
+             border-radius var(--bm-pl-exit) cubic-bezier(.76,0,.24,1);
+  will-change:transform;
+}
+.bm-pl-stage{ position:relative; display:flex; flex-direction:column; align-items:center; gap:20px;
+  transition:opacity .4s ease, transform .5s var(--bm-pl-ease); }
+.bm-pl-logo{ position:relative; width:var(--bm-pl-logo); aspect-ratio:1/1;
+  opacity:0; transform:scale(.94); filter:blur(7px);
+  animation:bmPlIn var(--bm-pl-in) var(--bm-pl-ease) forwards; }
+.bm-pl-img{ width:100%; height:100%; object-fit:contain; display:block; }
+/* gold light sheen, clipped to the logo silhouette via the PNG alpha mask */
+.bm-pl-sheen{ position:absolute; inset:0; pointer-events:none; opacity:0;
+  -webkit-mask:url("assets/big-mark_logo_transparent.png") center/contain no-repeat;
+          mask:url("assets/big-mark_logo_transparent.png") center/contain no-repeat;
+  background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.55) 47%,
+    rgba(255,255,255,.92) 50%, var(--bm-pl-accent) 50.5%, rgba(255,255,255,.92) 53%,
+    transparent 60%);
+  background-size:260% 100%;
+  animation:bmPlSheen 1.25s cubic-bezier(.5,0,.3,1) .5s forwards; }
+/* thin gold accent line drawing in beneath the logo */
+.bm-pl-line{ width:0; height:2px; border-radius:2px; background:var(--bm-pl-accent); opacity:0;
+  animation:bmPlLine 1.3s var(--bm-pl-ease) .35s forwards; }
+@keyframes bmPlIn{ to{ opacity:1; transform:scale(1); filter:blur(0); } }
+@keyframes bmPlSheen{ 0%{ opacity:0; background-position:170% 0; }
+  14%{ opacity:1; } 86%{ opacity:1; } 100%{ opacity:0; background-position:-70% 0; } }
+@keyframes bmPlLine{ 0%{ width:0; opacity:0; } 35%{ opacity:.9; } 100%{ width:56px; opacity:.9; } }
+/* exit: curtain lifts up, bottom edge arching, revealing the site */
+.bm-pl.bm-pl-done{ transform:translateY(-100%);
+  border-bottom-left-radius:38%; border-bottom-right-radius:38%; }
+.bm-pl.bm-pl-done .bm-pl-stage{ opacity:0; transform:translateY(-14px); }
+/* scroll is locked only while the intro is on screen */
+html.bm-pl-lock, html.bm-pl-lock body{ overflow:hidden !important; }
+@media (max-width:991px){ :root{ --bm-pl-logo:166px; } }
+@media (max-width:600px){ :root{ --bm-pl-logo:134px; } }
+@media (prefers-reduced-motion:reduce){
+  .bm-pl-logo{ animation:none; opacity:1; transform:none; filter:none; }
+  .bm-pl-sheen, .bm-pl-line{ animation:none; opacity:0; }
+  .bm-pl{ transition:opacity .45s ease; }
+  .bm-pl.bm-pl-done{ transform:none; border-radius:0; opacity:0; }
+}
 """
 style_tag = soup.new_tag("style")
 style_tag.string = OVERRIDE_CSS
@@ -1335,6 +1397,59 @@ EXTRA_HTML = """
 </script>
 """
 soup.body.append(BeautifulSoup(EXTRA_HTML, "html.parser"))
+
+# =====================================================================
+# 17) Premium preloader — inserted at the very top of <body> so it paints
+#     before anything else (no FOUC). Self-contained markup + controller.
+# =====================================================================
+PRELOADER_HTML = """
+<div id="bm-preloader" class="bm-pl" role="status" aria-live="polite" aria-label="Ładowanie strony BIG-MARK">
+  <div class="bm-pl-stage">
+    <div class="bm-pl-logo">
+      <img class="bm-pl-img" src="assets/big-mark_logo_transparent.png" alt="BIG-MARK" decoding="async" fetchpriority="high"/>
+      <span class="bm-pl-sheen" aria-hidden="true"></span>
+    </div>
+    <span class="bm-pl-line" aria-hidden="true"></span>
+  </div>
+</div>
+<script>
+/* Preloader controller — independent & fail-safe: it NEVER traps the page.
+   Waits for window load, holds a minimum on-screen time so the brand intro
+   always completes (no flash on fast loads), then lifts the curtain and
+   removes itself from the DOM so scroll/clicks/animations stay untouched. */
+(function(){
+  try{
+    var pl = document.getElementById('bm-preloader');
+    if(!pl){ return; }
+    var root = document.documentElement;
+    root.classList.add('bm-pl-lock');
+    var minMs = parseInt(getComputedStyle(root).getPropertyValue('--bm-pl-min'), 10) || 1800;
+    var start = Date.now(), done = false;
+    function unlock(){ root.classList.remove('bm-pl-lock'); }
+    function remove(){ if(pl && pl.parentNode){ pl.parentNode.removeChild(pl); pl = null; } }
+    function hide(){
+      if(done){ return; } done = true;
+      var wait = Math.max(0, minMs - (Date.now() - start));
+      setTimeout(function(){
+        if(!pl){ return; }
+        pl.classList.add('bm-pl-done');
+        unlock();
+        var gone = false, fin = function(){ if(gone){ return; } gone = true; remove(); };
+        pl.addEventListener('transitionend', function(e){ if(e.propertyName === 'transform'){ fin(); } });
+        setTimeout(fin, 1400); /* fallback if transitionend never fires */
+      }, wait);
+    }
+    if(document.readyState === 'complete'){ hide(); }
+    else { window.addEventListener('load', hide); }
+    setTimeout(hide, 7000); /* hard safety: reveal no matter what */
+  }catch(e){
+    try{ var p = document.getElementById('bm-preloader'); if(p && p.parentNode){ p.parentNode.removeChild(p); } }catch(_){}
+    document.documentElement.classList.remove('bm-pl-lock');
+  }
+})();
+</script>
+"""
+soup.body.insert(0, BeautifulSoup(PRELOADER_HTML, "html.parser"))
 
 # =====================================================================
 # write

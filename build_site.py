@@ -100,6 +100,19 @@ for m in soup.find_all("meta"):
     if m.get("property") in ("og:image",) and m.get("content"):
         m["content"] = PH(1)
 
+# ---------- favicon: BIG-MARK emblem (replaces the template's Flampt icons) ----------
+for link in soup.find_all("link"):
+    rels = link.get("rel") or []
+    if "shortcut" in rels or "icon" in rels or "apple-touch-icon" in rels:
+        link.decompose()
+_head = soup.head
+for _attrs in (
+    {"rel": "icon", "type": "image/png", "sizes": "256x256", "href": "assets/favicon-256.png"},
+    {"rel": "icon", "type": "image/png", "sizes": "32x32",   "href": "assets/favicon-32.png"},
+    {"rel": "apple-touch-icon", "sizes": "180x180",          "href": "assets/apple-touch-icon.png"},
+):
+    _head.append(soup.new_tag("link", **_attrs))
+
 # brand colour override + custom additions (popup / sticky / form) injected at end of <head>
 OVERRIDE_CSS = """
 /* ===== BIG-MARK brand override (gold/graphite) =====

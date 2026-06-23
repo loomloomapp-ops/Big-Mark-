@@ -975,25 +975,27 @@ ts = section("rt-testimonial-slider")
 if ts:
     main = ts.select_one(".rt-testimonial-slider-main")
     if main is not None:
+        # Real verified Google reviews (verbatim; only obvious diacritic typos fixed).
         REVIEWS = [
-            ("Marta K.", "Remont mieszkania, Lublin",
-             "Bardzo dobry kontakt i konkretne podejście. Wszystko ustalone wcześniej, "
-             "a remont przebiegł bez niepotrzebnych problemów. Polecam."),
-            ("Krzysztof W.", "Remont łazienki, okolice Lublina",
-             "Łazienka wykonana dokładnie, z dużą dbałością o szczegóły. Widać, że wykonawca "
-             "nie zostawia rzeczy „na później”."),
-            ("Anna S.", "Wykończenie mieszkania, Lublin",
-             "Solidnie i terminowo. Panowie posprzątali po sobie, a efekt końcowy przerósł "
-             "nasze oczekiwania."),
-            ("Tomasz L.", "Generalny remont, Lublin",
-             "Kompleksowy remont — od przygotowania ścian po wykończenie. Jesteśmy bardzo "
-             "zadowoleni z jakości."),
-            ("Ewa M.", "Układanie płytek, Lublin",
-             "Świetna komunikacja na każdym etapie. Pomogli też dobrać materiały. Płytki "
-             "ułożone idealnie równo."),
-            ("Paweł R.", "Remont kuchni, Lublin i okolice",
-             "Profesjonalnie i bez pośpiechu kosztem jakości. Równe ściany, czyste detale. "
-             "Robota na medal."),
+            ("Wojtek Golebiowski", "Opinia z Google",
+             "Zdecydowanie polecam tę ekipę budowlaną za pełen profesjonalizm i rzetelność. "
+             "Prace zostały wykonane bardzo dokładnie, z dbałością o każdy detal. Wszystko "
+             "przebiegało zgodnie z ustalonym harmonogramem i bez opóźnień. Świetny kontakt "
+             "oraz gotowość do doradztwa na każdym etapie realizacji to duży atut. Solidna "
+             "firma, której można w pełni zaufać."),
+            ("Daniel Kuczek", "Opinia z Google",
+             "Polecam tę firmę, pełen profesjonalizm, bardzo dobra komunikacja a przede "
+             "wszystkim terminowość i jakość wykonanej pracy!"),
+            ("Antoni Dybała", "Opinia z Google",
+             "Serdecznie polecam. Remont wykonany w terminie i nie ma na co narzekać. Jednym "
+             "słowem profesjonalista, któremu można powierzyć swoje zaufanie!"),
+            ("Jacek Kluch", "Opinia z Google",
+             "Prace remontowe wykonane zgodnie z założonym planem, czas i jakość wykonania "
+             "na 6 gwiazdek, firma godna polecenia, polecam."),
+            ("Levigor DM", "Opinia z Google",
+             "Prace remontowe są doskonałe i wysokiej jakości. Poza tym działają szybko. "
+             "Dałbym im sześć gwiazdek, gdyby ich ceny za remonty mieszkań były niższe. "
+             "Ale chyba trzeba zapłacić więcej za jakość."),
         ]
         star = ('<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
                 '<path d="M12 2l2.9 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 '

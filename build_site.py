@@ -1194,6 +1194,32 @@ for a in soup.find_all("a", href=True):
     if "facebook.com" in h and "share/g" not in h:
         a["href"] = "https://www.facebook.com/share/g/1EL1bzxpEm/"
 
+# Catch-all: wire EVERY styled "Zostaw zgłoszenie" CTA to the popup — including
+# the navbar "Contact us", the about-us ("Dlaczego nam ufają") and featured
+# ("Nasze realizacje") buttons, which the template left as plain #top/# anchors.
+# WhatsApp/tel buttons are left alone.
+for a in soup.find_all("a"):
+    btn = a.find("div", class_="rt-text-style-button")
+    if btn is None:
+        continue
+    href = (a.get("href") or "").strip()
+    if "wa.me" in href or "whatsapp" in href.lower() or href.startswith("tel:"):
+        continue
+    if btn.get_text(strip=True) in ("Contact us", "Get free quote", "Get a free inspection",
+                                    "Lets connect", "Learn more", "View all projects"):
+        set_text(btn, "Zostaw zgłoszenie")
+    if btn.get_text(strip=True) == "Zostaw zgłoszenie":
+        a["data-bm-popup"] = "1"
+
+# Normalize every popup CTA to open ONLY the popup — no page scroll. Webflow's
+# runtime smooth-scrolls any <a href="#..."> even after preventDefault, so we
+# strip the href and make these proper buttons (role=button keeps them keyboard
+# accessible; the popup handler already wires Enter/Space for role=button).
+for el in soup.find_all(attrs={"data-bm-popup": True}):
+    if el.name == "a" and el.has_attr("href"):
+        del el["href"]
+        el["role"] = "button"; el["tabindex"] = "0"
+
 # ---- REORDER: move "Liczby" (counter) down, between "Okremi roboty"
 #      (why-choose) and "Nasze realizacje" (featured-project) ----
 def body_block(sec):

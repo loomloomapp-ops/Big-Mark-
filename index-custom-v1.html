@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin</title>
+<meta name="description" content="Remonty mieszkań, łazienek, układanie płytek, elektryka G1, ogrzewanie gazowe G3 i prace wykończeniowe w Lublinie i okolicach. Zostaw zgłoszenie do BIG-MARK." />
+<meta name="theme-color" content="#1E1C18" />
+<link rel="icon" type="image/png" href="assets/big-mark_logo_transparent.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin" />
+<meta property="og:description" content="Remonty bez niedokończonych prac. Mieszkania, łazienki, płytki, instalacje G1/G3, prace wykończeniowe w Lublinie i okolicach." />
+<meta property="og:image" content="assets/photos/gallery-01.jpeg" />
+<meta property="og:locale" content="pl_PL" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   BIG-MARK — Landing page
+   Warm natural premium renovation
+   ========================================================= */
+
+:root{
+  --ink:#232220;            /* графіт з логотипу (#242424) z odrobiną ciepła */
+  --graphite:#2E2C28;
+  --text:#33302A;
+  --muted:#756F63;
+  --beige:#F4EDE0;
+  --beige-2:#ECE0CD;
+  --cream:#FBF7EF;
+  --white:#ffffff;
+  --ochra:#E49C0C;          /* złoto/bursztyn z logotypu BIG-MARK */
+  --ochra-deep:#C5850A;     /* ciemniejszy bursztyn dla kontrastu na jasnym tle */
+  --gold-bright:#F0A818;    /* rozjaśniony refleks z logotypu */
+  --ochra-soft:#F0D29B;
+  --terakota:#B65A39;
+  --olive:#6E7340;
+  --chartreuse:#F0A818;     /* dawny akcent chartreuse → bursztyn z logotypu */
+  --chartreuse-dk:#D8930E;
+  --line:rgba(40,36,28,.12);
+  --line-strong:rgba(40,36,28,.2);
+
+  --font-display:'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --r-xl:36px;
+  --r-lg:28px;
+  --r-md:20px;
+  --r-sm:14px;
+  --pill:999px;
+
+  --shadow-sm:0 8px 24px -12px rgba(46,33,12,.28);
+  --shadow-md:0 26px 60px -28px rgba(46,33,12,.42);
+  --shadow-lg:0 40px 90px -40px rgba(46,33,12,.5);
+
+  --container:1200px;
+  --header-h:76px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  font-family:var(--font-sans);
+  color:var(--text);
+  background:var(--beige);
+  line-height:1.6;
+  font-size:17px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body.no-scroll{overflow:hidden}
+
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 24px}
+
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;color:var(--ink);line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.4vw,3.4rem)}
+h3{font-size:clamp(1.3rem,2.4vw,1.8rem);letter-spacing:-.005em}
+.serif-i{font-style:italic;color:var(--terakota)}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-sans);font-weight:600;font-size:.78rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--terakota);
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--terakota);border-radius:2px}
+
+.section{padding:clamp(64px,9vw,128px) 0;position:relative}
+.section-head{max-width:680px;margin-bottom:clamp(36px,5vw,64px)}
+.section-head .eyebrow{margin-bottom:18px}
+.section-head p.lead{margin-top:18px;color:var(--muted);font-size:1.06rem;max-width:560px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:600;font-size:.97rem;padding:15px 26px;border-radius:var(--pill);
+  transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+  white-space:nowrap;line-height:1;
+}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--ochra);color:var(--ink);box-shadow:0 14px 30px -14px rgba(228,156,12,.95)}
+.btn-primary:hover{transform:translateY(-3px);background:var(--ochra-deep);box-shadow:0 20px 42px -16px rgba(228,156,12,1)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{transform:translateY(-3px);background:#000}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line-strong)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--ink);background:rgba(255,255,255,.4)}
+.btn-wa{background:#1f8a4c;color:#fff}
+.btn-wa:hover{transform:translateY(-3px);background:#1a7a43}
+.btn-lg{padding:18px 32px;font-size:1.02rem}
+.btn-block{width:100%}
+
+/* ======================= HEADER ======================= */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  transition:transform .4s cubic-bezier(.4,0,.2,1), background .4s ease, box-shadow .4s ease, border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+.header.scrolled{
+  background:rgba(244,237,224,.82);
+  backdrop-filter:saturate(180%) blur(16px);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  border-bottom-color:var(--line);
+  box-shadow:0 10px 30px -22px rgba(46,33,12,.5);
+}
+.header.hidden{transform:translateY(-104%)}
+.header-inner{
+  height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:11px;flex:none}
+.brand img{height:42px;width:auto}
+.brand-name{font-family:var(--font-display);font-weight:600;font-size:1.32rem;color:var(--ink);letter-spacing:-.01em;line-height:1}
+.brand-name span{color:var(--ochra)}
+
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-weight:500;font-size:.95rem;color:var(--text);position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--terakota);border-radius:2px;transition:width .28s ease}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{width:100%}
+
+.header-cta{display:flex;align-items:center;gap:14px}
+.header-phone{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--ink)}
+.header-phone svg{width:17px;height:17px;color:var(--terakota)}
+.icon-btn{
+  width:44px;height:44px;border-radius:var(--pill);display:inline-flex;align-items:center;justify-content:center;
+  background:#1f8a4c;color:#fff;transition:transform .25s ease, background .25s ease;
+}
+.icon-btn:hover{transform:translateY(-3px) scale(1.04)}
+.icon-btn svg{width:21px;height:21px}
+
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:1.5px solid var(--line-strong);flex-direction:column;align-items:center;justify-content:center;gap:5px;background:rgba(255,255,255,.4)}
+.burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Mobile menu ---------- */
+.mobile-menu{
+  position:fixed;inset:0;z-index:95;background:var(--ink);color:var(--cream);
+  display:flex;flex-direction:column;padding:26px 26px 36px;
+  transform:translateX(100%);transition:transform .42s cubic-bezier(.4,0,.2,1);
+  visibility:hidden;
+}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:42px}
+.mm-top .brand-name{color:var(--cream)}
+.mm-top .brand-name span{color:var(--gold-bright)}
+.mm-close{width:46px;height:46px;border-radius:14px;border:1px solid rgba(255,255,255,.2);color:var(--cream);font-size:1.4rem;display:flex;align-items:center;justify-content:center}
+.mm-nav{display:flex;flex-direction:column;gap:4px}
+.mm-nav a{font-family:var(--font-display);font-size:2rem;font-weight:500;padding:10px 0;color:var(--cream);opacity:.92;transition:.25s;display:flex;align-items:center;justify-content:space-between}
+.mm-nav a:hover,.mm-nav a:active{color:var(--chartreuse);padding-left:6px}
+.mm-nav a span{font-family:var(--font-sans);font-size:.85rem;opacity:.4}
+.mm-foot{margin-top:auto;display:flex;flex-direction:column;gap:16px;padding-top:30px}
+.mm-foot .btn{width:100%}
+.mm-contact{display:flex;flex-direction:column;gap:8px;font-size:1.05rem}
+.mm-contact a{display:flex;align-items:center;gap:12px;color:var(--cream);opacity:.85}
+.mm-contact a svg{width:18px;height:18px;color:var(--chartreuse)}
+.mm-social{display:flex;gap:12px;margin-top:6px}
+.mm-social a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:var(--cream);transition:.25s}
+.mm-social a:hover{background:var(--chartreuse);color:var(--ink);border-color:var(--chartreuse)}
+.mm-social a svg{width:20px;height:20px}
+
+/* ======================= HERO ======================= */
+.hero{position:relative;padding-top:calc(var(--header-h) + 46px);padding-bottom:70px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-12%;right:-8%;width:60vw;height:60vw;max-width:780px;max-height:780px;
+  background:radial-gradient(circle at 50% 50%, rgba(232,201,139,.55), rgba(232,201,139,0) 62%);
+  z-index:0;pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-20%;left:-12%;width:48vw;height:48vw;max-width:620px;max-height:620px;
+  background:radial-gradient(circle at 50% 50%, rgba(110,115,64,.22), rgba(110,115,64,0) 60%);
+  z-index:0;pointer-events:none;
+}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.hero-copy{max-width:600px}
+.hero-copy .eyebrow{margin-bottom:22px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);font-weight:500;margin-bottom:22px}
+.hero-sub{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--text);max-width:520px;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px}
+
+.trust-bar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 26px;max-width:520px}
+.trust-item{display:flex;align-items:center;gap:11px;font-weight:500;font-size:.95rem;color:var(--graphite)}
+.trust-item .ti-ico{
+  width:38px;height:38px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:var(--cream);border:1px solid var(--line);color:var(--terakota);
+}
+.trust-item .ti-ico svg{width:19px;height:19px}
+.trust-item b{color:var(--ink);font-weight:700}
+
+/* Hero visual */
+.hero-visual{position:relative;min-height:520px}
+.hv-main{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-md);
+  aspect-ratio:4/5;background:var(--beige-2);
+}
+.hv-main img{width:100%;height:100%;object-fit:cover}
+.hv-sub{
+  position:absolute;right:-26px;bottom:42px;width:46%;border-radius:var(--r-md);overflow:hidden;
+  box-shadow:var(--shadow-lg);border:6px solid var(--beige);aspect-ratio:3/4;background:var(--beige-2);
+}
+.hv-sub img{width:100%;height:100%;object-fit:cover}
+.hv-badge{
+  position:absolute;left:-22px;top:34px;background:var(--cream);border-radius:var(--r-md);
+  padding:14px 18px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:12px;z-index:3;
+  border:1px solid var(--line);
+}
+.hv-badge .stars{color:var(--ochra);font-size:1rem;letter-spacing:1px;line-height:1}
+.hv-badge .hb-num{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1}
+.hv-badge .hb-txt{font-size:.78rem;color:var(--muted);line-height:1.3}
+.hv-chip{
+  position:absolute;left:14px;bottom:-18px;z-index:3;background:var(--ink);color:var(--cream);
+  border-radius:var(--pill);padding:11px 20px;font-weight:600;font-size:.85rem;display:flex;align-items:center;gap:9px;box-shadow:var(--shadow-md);
+}
+.hv-chip b{color:var(--chartreuse)}
+
+.scroll-cue{display:inline-flex;align-items:center;gap:10px;margin-top:48px;color:var(--muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+.scroll-cue .mouse{width:22px;height:34px;border:2px solid var(--line-strong);border-radius:12px;position:relative}
+.scroll-cue .mouse::before{content:"";position:absolute;left:50%;top:7px;width:3px;height:6px;background:var(--terakota);border-radius:2px;transform:translateX(-50%);animation:scrolldot 1.6s infinite}
+@keyframes scrolldot{0%{opacity:0;transform:translate(-50%,-4px)}40%{opacity:1}80%{opacity:0;transform:translate(-50%,8px)}}
+
+/* logos / zakres marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:rgba(251,247,239,.5);position:relative;z-index:2}
+.marquee-track{display:flex;gap:46px;width:max-content;animation:marquee 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{display:inline-flex;align-items:center;gap:12px;font-weight:600;color:var(--graphite);white-space:nowrap;font-size:1rem}
+.marquee span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--terakota)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ======================= DLACZEGO ======================= */
+#dlaczego{background:linear-gradient(180deg, var(--beige) 0%, var(--cream) 100%)}
+.why-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}
+.why-feature{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;
+  color:var(--cream);padding:38px;box-shadow:var(--shadow-md);
+}
+.why-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.why-feature::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(20,18,14,.05) 0%, rgba(20,18,14,.78) 78%);z-index:1}
+.why-feature .wf-inner{position:relative;z-index:2;max-width:440px}
+.why-feature .badge-soft{display:inline-flex;align-items:center;gap:8px;background:var(--chartreuse);color:var(--ink);font-weight:600;font-size:.8rem;padding:7px 14px;border-radius:var(--pill);margin-bottom:16px}
+.why-feature h3{color:#fff;font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:12px}
+.why-feature p{color:rgba(255,255,255,.85);font-size:1rem}
+
+.why-points{display:flex;flex-direction:column;gap:14px}
+.wp-card{
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);padding:20px 22px;
+  display:flex;gap:16px;align-items:flex-start;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+.wp-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--ochra-soft)}
+.wp-ico{width:44px;height:44px;border-radius:13px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--beige-2);color:var(--terakota)}
+.wp-ico svg{width:22px;height:22px}
+.wp-card h4{font-family:var(--font-sans);font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:3px}
+.wp-card p{font-size:.92rem;color:var(--muted);line-height:1.5}
+
+/* ======================= USŁUGI (bento) ======================= */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;grid-auto-rows:240px}
+.svc{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:26px;color:var(--cream);box-shadow:var(--shadow-sm);isolation:isolate;
+}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.svc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(20,18,14,.12) 0%, rgba(20,18,14,.82) 88%)}
+.svc:hover img{transform:scale(1.07)}
+.svc .svc-tag{position:absolute;top:20px;left:20px;background:rgba(251,247,239,.9);color:var(--graphite);font-weight:600;font-size:.74rem;padding:6px 13px;border-radius:var(--pill);letter-spacing:.02em}
+.svc h3{color:#fff;font-size:1.45rem;margin-bottom:7px}
+.svc p{color:rgba(255,255,255,.82);font-size:.92rem;max-width:36ch}
+.svc .svc-arrow{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;background:var(--chartreuse);color:var(--ink);display:flex;align-items:center;justify-content:center;transform:translateY(-6px) scale(.8);opacity:0;transition:.3s}
+.svc:hover .svc-arrow{transform:translateY(0) scale(1);opacity:1}
+.svc-arrow svg{width:18px;height:18px}
+.svc.col-3{grid-column:span 3}
+.svc.col-2{grid-column:span 2}
+.svc.row-2{grid-row:span 2}
+
+.svc-cta{margin-top:42px;display:flex;flex-wrap:wrap;align-items:center;gap:18px;justify-content:space-between;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 32px}
+.svc-cta p{font-family:var(--font-display);font-size:1.25rem;color:var(--ink);max-width:60ch}
+.svc-cta .sc-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ======================= PRACE SPECJALISTYCZNE ======================= */
+#specjalistyczne{background:var(--ink);color:var(--cream)}
+#specjalistyczne .eyebrow{color:var(--chartreuse)}
+#specjalistyczne .eyebrow::before{background:var(--chartreuse)}
+#specjalistyczne h2{color:#fff}
+#specjalistyczne .section-head p.lead{color:rgba(255,255,255,.7)}
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.spec-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-md);
+  padding:24px;transition:transform .28s ease, background .28s ease, border-color .28s ease;position:relative;overflow:hidden;
+}
+.spec-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.07);border-color:rgba(240,168,24,.45)}
+.spec-ico{width:48px;height:48px;border-radius:14px;background:rgba(240,168,24,.12);color:var(--chartreuse);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.spec-ico svg{width:24px;height:24px}
+.spec-card h4{font-family:var(--font-sans);font-weight:600;font-size:1.06rem;color:#fff;margin-bottom:6px}
+.spec-card p{font-size:.88rem;color:rgba(255,255,255,.6)}
+.cert-tag{display:inline-flex;align-items:center;gap:7px;margin-top:14px;background:var(--chartreuse);color:var(--ink);font-weight:700;font-size:.76rem;padding:6px 12px;border-radius:var(--pill)}
+.cert-tag svg{width:14px;height:14px}
+.spec-note{margin-top:30px;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.72);font-size:.96rem;flex-wrap:wrap}
+.spec-note svg{width:22px;height:22px;color:var(--chartreuse);flex:none}
+
+/* ======================= LICZBY ======================= */
+#liczby{background:var(--cream)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stat{
+  background:var(--beige);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 28px;position:relative;overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.stat:hover{transform:translateY(-5px);box-shadow:var(--shadow-sm)}
+.stat::before{content:"";position:absolute;top:-30px;right:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle, rgba(232,201,139,.45), transparent 70%)}
+.stat .s-num{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,3.6rem);font-weight:600;color:var(--ink);line-height:1;position:relative}
+.stat .s-num .star{color:var(--ochra)}
+.stat .s-label{margin-top:12px;font-weight:600;color:var(--graphite);position:relative}
+.stat .s-desc{margin-top:4px;font-size:.9rem;color:var(--muted);position:relative}
+
+/* ======================= REALIZACJE ======================= */
+.gal-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{padding:10px 20px;border-radius:var(--pill);border:1.5px solid var(--line-strong);font-weight:600;font-size:.9rem;color:var(--graphite);background:transparent;transition:.25s}
+.chip:hover{border-color:var(--ink)}
+.chip.active{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+
+.gallery{columns:3;column-gap:22px}
+.gal-item{
+  break-inside:avoid;margin-bottom:22px;border-radius:var(--r-lg);overflow:hidden;position:relative;
+  box-shadow:var(--shadow-sm);cursor:pointer;background:var(--beige-2);
+  transition:opacity .4s ease, transform .4s ease;
+}
+.gal-item img{width:100%;height:auto;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,18,14,.72));opacity:0;transition:opacity .35s ease}
+.gal-item:hover::after{opacity:1}
+.gal-cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;transform:translateY(10px);opacity:0;transition:.35s}
+.gal-item:hover .gal-cap{transform:translateY(0);opacity:1}
+.gal-cap b{display:block;font-family:var(--font-display);font-size:1.12rem;font-weight:600}
+.gal-cap span{font-size:.83rem;opacity:.8}
+.gal-item.hide{display:none}
+
+/* ======================= OPINIE ======================= */
+#opinie{background:linear-gradient(180deg, var(--cream) 0%, var(--beige) 100%)}
+.rev-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:42px}
+.rev-rating{display:flex;align-items:center;gap:16px;background:var(--cream);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 22px;box-shadow:var(--shadow-sm)}
+.rev-rating .rr-num{font-family:var(--font-display);font-size:2.4rem;font-weight:600;color:var(--ink);line-height:1}
+.rev-rating .rr-stars{color:var(--ochra);font-size:1.05rem;letter-spacing:2px}
+.rev-rating .rr-sub{font-size:.84rem;color:var(--muted)}
+
+.slider{position:relative;overflow:hidden;border-radius:var(--r-lg)}
+.slides{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.slide{min-width:100%;padding:4px}
+@media(min-width:760px){.slide{min-width:50%}}
+.rev-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;height:100%;box-shadow:var(--shadow-sm)}
+.rev-card .quote-mark{font-family:var(--font-display);font-size:3.4rem;line-height:.6;color:var(--ochra-soft)}
+.rev-card .rev-stars{color:var(--ochra);letter-spacing:2px;margin:6px 0 16px}
+.rev-card p.rev-text{font-size:1.08rem;color:var(--graphite);font-family:var(--font-display);font-weight:400;line-height:1.5}
+.rev-card .rev-author{margin-top:22px;display:flex;align-items:center;gap:13px}
+.rev-author .ra-av{width:46px;height:46px;border-radius:50%;background:var(--terakota);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--font-display)}
+.rev-author b{display:block;font-family:var(--font-sans);font-size:.96rem;color:var(--ink)}
+.rev-author span{font-size:.83rem;color:var(--muted)}
+
+.slider-nav{display:flex;align-items:center;justify-content:space-between;margin-top:28px;gap:18px}
+.slider-dots{display:flex;gap:9px}
+.s-dot{width:9px;height:9px;border-radius:50%;background:var(--line-strong);transition:.25s;cursor:pointer}
+.s-dot.active{background:var(--terakota);width:26px;border-radius:6px}
+.slider-arrows{display:flex;gap:10px}
+.s-arrow{width:50px;height:50px;border-radius:50%;border:1.5px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--ink);transition:.25s;background:var(--cream)}
+.s-arrow:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.s-arrow svg{width:20px;height:20px}
+
+/* ======================= ZGŁOSZENIE ======================= */
+#kontakt{background:var(--beige)}
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.lead-info{
+  background:var(--ink);color:var(--cream);border-radius:var(--r-xl);padding:clamp(32px,4vw,48px);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.lead-info::before{content:"";position:absolute;bottom:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(240,168,24,.18),transparent 70%)}
+.lead-info .eyebrow{color:var(--chartreuse)}
+.lead-info .eyebrow::before{background:var(--chartreuse)}
+.lead-info h2{color:#fff;margin:18px 0 14px;font-size:clamp(1.8rem,3vw,2.5rem)}
+.lead-info > p{color:rgba(255,255,255,.74);position:relative}
+.lead-args{margin-top:26px;display:flex;flex-direction:column;gap:14px;position:relative}
+.lead-args li{display:flex;gap:13px;align-items:flex-start;color:rgba(255,255,255,.9);font-size:.98rem}
+.lead-args li svg{width:22px;height:22px;color:var(--chartreuse);flex:none;margin-top:1px}
+.lead-direct{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;gap:12px;position:relative}
+.lead-direct a{flex:1;min-width:150px}
+
+.lead-form{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-xl);padding:clamp(28px,3.5vw,42px);box-shadow:var(--shadow-md)}
+.form-field{margin-bottom:18px}
+.form-field label{display:block;font-weight:600;font-size:.88rem;color:var(--graphite);margin-bottom:7px}
+.form-field label .req{color:var(--terakota)}
+.form-field input,.form-field textarea{
+  width:100%;padding:14px 16px;border-radius:var(--r-sm);border:1.5px solid var(--line-strong);
+  background:var(--white);font-family:inherit;font-size:1rem;color:var(--text);transition:border-color .2s ease, box-shadow .2s ease;
+}
+.form-field input:focus,.form-field textarea:focus{outline:none;border-color:var(--ochra);box-shadow:0 0 0 4px rgba(228,156,12,.14)}
+.form-field textarea{resize:vertical;min-height:110px}
+.form-field.error input,.form-field.error textarea{border-color:#cf4b2e;box-shadow:0 0 0 4px rgba(207,75,46,.12)}
+.err-msg{display:none;color:#cf4b2e;font-size:.82rem;margin-top:6px}
+.form-field.error .err-msg{display:block}
+
+.check{display:flex;gap:12px;align-items:flex-start;margin:6px 0 20px;cursor:pointer;font-size:.9rem;color:var(--muted)}
+.check input{position:absolute;opacity:0;width:0;height:0}
+.check .box{width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line-strong);flex:none;display:flex;align-items:center;justify-content:center;background:var(--white);transition:.2s;margin-top:1px}
+.check .box svg{width:14px;height:14px;color:var(--ink);opacity:0;transform:scale(.6);transition:.2s}
+.check input:checked + .box{background:var(--chartreuse);border-color:var(--chartreuse)}
+.check input:checked + .box svg{opacity:1;transform:scale(1)}
+.check input:focus-visible + .box{box-shadow:0 0 0 4px rgba(228,156,12,.2)}
+.check a{color:var(--terakota);font-weight:600;text-decoration:underline}
+.check.error .box{border-color:#cf4b2e}
+
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success.show{display:block;animation:pop .4s ease}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.form-success .fs-ico{width:72px;height:72px;border-radius:50%;background:var(--chartreuse);color:var(--ink);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.form-success .fs-ico svg{width:36px;height:36px}
+.form-success h3{margin-bottom:10px}
+.form-success p{color:var(--muted);max-width:34ch;margin:0 auto}
+
+/* ======================= FAQ ======================= */
+#faq{background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;align-items:start}
+.faq-aside{position:sticky;top:110px}
+.faq-aside .btn{margin-top:22px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--beige);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;transition:border-color .25s ease, background .25s ease}
+.faq-item.open{border-color:var(--ochra-soft);background:var(--white)}
+.faq-q{width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;font-family:var(--font-display);font-size:1.12rem;font-weight:500;color:var(--ink)}
+.faq-q .faq-plus{width:32px;height:32px;border-radius:50%;background:var(--cream);border:1px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center;transition:.3s;position:relative}
+.faq-item.open .faq-q .faq-plus{background:var(--ink);transform:rotate(135deg)}
+.faq-plus::before,.faq-plus::after{content:"";position:absolute;background:var(--ink);border-radius:2px;transition:background .3s}
+.faq-plus::before{width:13px;height:2px}
+.faq-plus::after{width:2px;height:13px}
+.faq-item.open .faq-plus::before,.faq-item.open .faq-plus::after{background:var(--chartreuse)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{padding:0 24px 24px;color:var(--muted);font-size:1rem}
+
+/* ======================= FOOTER ======================= */
+.footer{background:var(--ink);color:rgba(255,255,255,.72);padding-top:72px;position:relative;overflow:hidden}
+.footer::before{content:"";position:absolute;top:-80px;left:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(182,90,57,.22),transparent 68%)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px;position:relative;z-index:2;padding-bottom:50px}
+.footer .brand-name{color:#fff}
+.footer .brand-name span{color:var(--gold-bright)}
+.footer-about{margin-top:18px;max-width:32ch;font-size:.95rem}
+.footer-social{display:flex;gap:11px;margin-top:22px}
+.footer-social a{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;transition:.25s}
+.footer-social a:hover{background:var(--chartreuse);color:var(--ink);border-color:var(--chartreuse);transform:translateY(-3px)}
+.footer-social a svg{width:20px;height:20px}
+.footer h4{font-family:var(--font-sans);color:#fff;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.footer-col ul{display:flex;flex-direction:column;gap:11px}
+.footer-col a{transition:.2s;font-size:.96rem}
+.footer-col a:hover{color:var(--chartreuse)}
+.footer-contact a{display:flex;align-items:flex-start;gap:11px;font-size:.96rem;margin-bottom:13px;transition:.2s}
+.footer-contact a:hover{color:#fff}
+.footer-contact svg{width:18px;height:18px;color:var(--chartreuse);flex:none;margin-top:2px}
+.footer-map{border-radius:var(--r-md);overflow:hidden;border:1px solid rgba(255,255,255,.14);margin-top:6px;height:160px}
+.footer-map iframe{width:100%;height:100%;border:0;filter:grayscale(.2) contrast(1.05)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:24px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;position:relative;z-index:2;font-size:.86rem}
+.footer-bottom a{text-decoration:underline;text-underline-offset:3px}
+.footer-bottom a:hover{color:#fff}
+
+/* ======================= STICKY MOBILE CTA ======================= */
+.mobile-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(244,237,224,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);
+}
+.mobile-cta .btn{flex:1}
+.mobile-cta .btn-call{flex:none;width:52px;padding:0}
+
+/* ======================= FLOATING WIDGET (desktop) ======================= */
+.fab-wrap{position:fixed;right:26px;bottom:26px;z-index:80;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.fab-mini{display:flex;flex-direction:column;gap:10px;transform:translateY(12px) scale(.9);opacity:0;pointer-events:none;transition:.3s}
+.fab-wrap.open .fab-mini{transform:translateY(0) scale(1);opacity:1;pointer-events:auto}
+.fab-mini a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);transition:transform .25s ease}
+.fab-mini a:hover{transform:scale(1.08)}
+.fab-mini .fb-wa{background:#1f8a4c;color:#fff}
+.fab-mini .fb-call{background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+.fab-mini a svg{width:24px;height:24px}
+.fab-main{
+  display:inline-flex;align-items:center;gap:11px;background:var(--ochra);color:var(--ink);font-weight:600;
+  padding:15px 22px;border-radius:var(--pill);box-shadow:0 18px 40px -16px rgba(228,156,12,1);transition:transform .25s ease;
+}
+.fab-main:hover{transform:translateY(-3px)}
+.fab-main svg{width:20px;height:20px;transition:transform .3s ease}
+.fab-wrap.open .fab-main svg.fab-chevron{transform:rotate(180deg)}
+
+/* ======================= POPUP ======================= */
+.popup-overlay{position:fixed;inset:0;z-index:100;background:rgba(20,16,10,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.3s;display:flex;align-items:center;justify-content:center;padding:20px}
+.popup-overlay.open{opacity:1;visibility:visible}
+.popup{
+  background:var(--cream);border-radius:var(--r-xl);max-width:480px;width:100%;padding:clamp(26px,4vw,40px);position:relative;
+  box-shadow:var(--shadow-lg);transform:translateY(24px) scale(.97);transition:transform .35s cubic-bezier(.4,0,.2,1);max-height:92vh;overflow-y:auto;
+}
+.popup-overlay.open .popup{transform:translateY(0) scale(1)}
+.popup-close{position:absolute;top:16px;right:16px;width:42px;height:42px;border-radius:50%;background:var(--beige);color:var(--ink);font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:.2s}
+.popup-close:hover{background:var(--beige-2);transform:rotate(90deg)}
+.popup .eyebrow{margin-bottom:12px}
+.popup h3{font-size:1.6rem;margin-bottom:6px}
+.popup > p.popup-sub{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.popup-alt{margin-top:18px;text-align:center;font-size:.9rem;color:var(--muted)}
+.popup-alt a{color:var(--terakota);font-weight:600}
+
+/* ======================= PRIVACY MODAL ======================= */
+.privacy-overlay{position:fixed;inset:0;z-index:110;background:rgba(20,16,10,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.3s;display:flex;align-items:center;justify-content:center;padding:20px}
+.privacy-overlay.open{opacity:1;visibility:visible}
+.privacy-box{background:var(--cream);border-radius:var(--r-lg);max-width:620px;width:100%;max-height:86vh;overflow-y:auto;padding:clamp(28px,4vw,44px);position:relative;box-shadow:var(--shadow-lg)}
+.privacy-box h3{margin-bottom:8px}
+.privacy-box h4{font-family:var(--font-sans);font-size:1rem;color:var(--ink);margin:20px 0 6px}
+.privacy-box p{font-size:.94rem;color:var(--muted);margin-bottom:8px}
+.privacy-box ul{margin:6px 0 8px 18px;list-style:disc}
+.privacy-box li{font-size:.94rem;color:var(--muted);margin-bottom:4px}
+
+/* ======================= REVEAL ANIMATION ======================= */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+.hero-anim{opacity:0;transform:translateY(26px);animation:heroIn .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-anim.a1{animation-delay:.05s}.hero-anim.a2{animation-delay:.18s}.hero-anim.a3{animation-delay:.31s}.hero-anim.a4{animation-delay:.44s}.hero-anim.a5{animation-delay:.57s}
+@keyframes heroIn{to{opacity:1;transform:none}}
+.hero-visual{opacity:0;transform:translateY(30px) scale(.97);animation:heroVis 1.1s cubic-bezier(.2,.7,.2,1) .25s forwards}
+@keyframes heroVis{to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal,.hero-anim,.hero-visual{opacity:1!important;transform:none!important;animation:none!important}
+  .marquee-track{animation:none}
+  .scroll-cue .mouse::before{animation:none}
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media(max-width:1080px){
+  .bento{grid-template-columns:repeat(4,1fr);grid-auto-rows:230px}
+  .svc.col-3{grid-column:span 2}
+  .svc.col-2{grid-column:span 2}
+  .spec-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  :root{--header-h:66px}
+  .nav,.header-phone{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:60px}
+  .hero-visual{max-width:480px;margin:0 auto;width:100%}
+  .why-grid{grid-template-columns:1fr}
+  .lead-grid{grid-template-columns:1fr}
+  .faq-grid{grid-template-columns:1fr;gap:28px}
+  .faq-aside{position:static}
+  .gallery{columns:2}
+  .mobile-cta{display:flex}
+  .fab-wrap{display:none}
+  body{padding-bottom:74px}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .container{padding:0 18px}
+  .header-cta .btn-primary{display:none}
+  .bento{grid-template-columns:1fr;grid-auto-rows:auto}
+  .svc{min-height:280px}
+  .svc.col-3,.svc.col-2,.svc.row-2{grid-column:auto;grid-row:auto}
+  .spec-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .gallery{columns:1}
+  .slide{min-width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .trust-bar{grid-template-columns:1fr}
+  .svc-cta{flex-direction:column;align-items:flex-start}
+  .hv-sub{display:none}
+  .hv-badge{left:-8px}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= HEADER ======================= -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="BIG-MARK — strona główna">
+      <img src="assets/big-mark_logo_transparent.png" alt="Logo BIG-MARK" />
+      <span class="brand-name">BIG<span>-MARK</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Nawigacja główna">
+      <a href="#dlaczego">Dlaczego my</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="tel:+48729405452" class="header-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+        +48 729 405 452
+      </a>
+      <a href="https://wa.me/48729405452" target="_blank" rel="noopener" class="icon-btn" aria-label="Napisz na WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <button class="btn btn-primary" data-popup-open>Zostaw zgłoszenie</button>
+      <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= MOBILE MENU ======================= -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mm-top">
+    <span class="brand-name">BIG<span>-MARK</span></span>
+    <button class="mm-close" id="mmClose" aria-label="Zamknij menu">&times;</button>
+  </div>
+  <nav class="mm-nav" aria-label="Nawigacja mobilna">
+    <a href="#dlaczego">Dlaczego my <span>01</span></a>
+    <a href="#uslugi">Usługi <span>02</span></a>
+    <a href="#realizacje">Realizacje <span>03</span></a>
+    <a href="#opinie">Opinie <span>04</span></a>
+    <a href="#faq">FAQ <span>05</span></a>
+    <a href="#kontakt">Kontakt <span>06</span></a>
+  </nav>
+  <div class="mm-foot">
+    <button class="btn btn-primary" data-popup-open>Zostaw zgłoszenie</button>
+    <div class="mm-contact">
+      <a href="tel:+48729405452"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg> +48 729 405 452</a>
+      <a href="https://wa.me/48729405452" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> Napisz na WhatsApp</a>
+    </div>
+    <div class="mm-social">
+      <a href="https://www.facebook.com/share/g/1EL1bzxpEm/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+      <a href="https://maps.app.goo.gl/YjLMa37nWnJyZ9iv7" target="_blank" rel="noopener" aria-label="Google Maps i opinie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow hero-anim a1">Lublin i okolice • Remonty i wykończenia</span>
+      <h1 class="hero-anim a2">Remonty mieszkań w Lublinie <span class="serif-i">bez niedokończonych prac</span></h1>
+      <p class="hero-sub hero-anim a3">BIG-MARK wykonuje remonty, wykończenia i prace specjalistyczne — dokładnie, bez zbędnych problemów i bez ukrytych niespodzianek.</p>
+      <div class="hero-actions hero-anim a4">
+        <button class="btn btn-primary btn-lg" data-popup-open>Zostaw zgłoszenie</button>
+        <a href="https://wa.me/48729405452" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207z"/></svg>
+          Napisz na WhatsApp
+        </a>
+      </div>
+      <div class="trust-bar hero-anim a5">
+        <div class="trust-item"><span class="ti-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.784 1.401 8.169L12 18.896l-7.335 3.868 1.401-8.169L.132 9.211l8.2-1.193z"/></svg></span><span><b>5★</b> opinie klientów</span></div>
+        <div class="trust-item"><span class="ti-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/></svg></span><span>Certyfikaty <b>G1 / G3</b></span></div>
+        <div class="trust-item"><span class="ti-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Lublin <b>i okolice</b></span></div>
+        <div class="trust-item"><span class="ti-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span><b>0</b> niedokończonych prac</span></div>
+      </div>
+      <div class="scroll-cue hero-anim a5"><span class="mouse"></span> Przewiń, aby zobaczyć więcej</div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv-main">
+        <img src="assets/photos/gallery-01.jpeg" alt="Remont mieszkania i łazienki w Lublinie — BIG-MARK" width="900" height="1100" fetchpriority="high" />
+      </div>
+      <div class="hv-sub">
+        <img src="assets/photos/gallery-09.jpeg" alt="Łazienka z umywalką i okrągłym lustrem po remoncie" loading="lazy" />
+      </div>
+      <div class="hv-badge">
+        <div>
+          <div class="hb-num">5,0</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="hb-txt">Opinie<br/>klientów</div>
+      </div>
+      <div class="hv-chip"><b>✓</b> Bez ukrytych niespodzianek</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ZAKRES MARQUEE ======================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Remonty mieszkań</span><span>Remont łazienki</span><span>Układanie płytek</span><span>Panele i laminat</span><span>Szpachlowanie i malowanie</span><span>Instalacje G1 / G3</span><span>Zabudowy GK</span><span>Meble na wymiar</span>
+    <span>Remonty mieszkań</span><span>Remont łazienki</span><span>Układanie płytek</span><span>Panele i laminat</span><span>Szpachlowanie i malowanie</span><span>Instalacje G1 / G3</span><span>Zabudowy GK</span><span>Meble na wymiar</span>
+  </div>
+</div>
+
+<!-- ======================= DLACZEGO NAM UFAJĄ ======================= -->
+<section class="section" id="dlaczego">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dlaczego nam ufają</span>
+      <h2>Remont prowadzony <span class="serif-i">spokojnie</span> i do końca</h2>
+      <p class="lead">Bierzemy odpowiedzialność za całość prac — także tych trudniejszych, przy których inni wykonawcy często rezygnują. Bez chaosu, bez znikania i bez zostawiania rzeczy „na później".</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-feature reveal">
+        <img src="assets/photos/gallery-04.jpeg" alt="Salon po remoncie z panelami i dekoracyjnymi ramami na ścianie" loading="lazy" />
+        <div class="wf-inner">
+          <span class="badge-soft">Najważniejsza zasada</span>
+          <h3>Nie zostawiam niedokończonych prac</h3>
+          <p>Każdy etap doprowadzamy do końca — od przygotowania powierzchni po ostatni detal wykończenia. Odbierasz remont gotowy do użytkowania.</p>
+        </div>
+      </div>
+
+      <div class="why-points">
+        <div class="wp-card reveal d1">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div><h4>Łatwa i spokojna komunikacja</h4><p>Jasne ustalenia na każdym etapie — wiesz, co i kiedy się dzieje.</p></div>
+        </div>
+        <div class="wp-card reveal d2">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <div><h4>Trudne prace, których inni nie chcą</h4><p>Podejmujemy się zadań wykraczających poza standardowy zakres remontu.</p></div>
+        </div>
+        <div class="wp-card reveal d3">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <div><h4>Pomoc w znalezieniu rozwiązania</h4><p>Doradzamy nawet wtedy, gdy problem wykracza poza typowy zakres prac.</p></div>
+        </div>
+        <div class="wp-card reveal d4">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9.5C7.5 19.5 4 17 4 12V6l8-3 8 3z"/></svg></span>
+          <div><h4>Certyfikaty G1 i G3</h4><p>Uprawnienia do prac instalacyjnych: elektryka (G1) i ogrzewanie gazowe (G3).</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= USŁUGI ======================= -->
+<section class="section" id="uslugi">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Usługi</span>
+      <h2>Kompleksowo lub <span class="serif-i">pojedynczo</span> — jak potrzebujesz</h2>
+      <p class="lead">Od całego remontu mieszkania po jedną konkretną pracę. Dobieramy zakres do Twoich potrzeb i budżetu.</p>
+    </div>
+
+    <div class="bento">
+      <article class="svc col-3 row-2">
+        <img src="assets/photos/gallery-04.jpeg" alt="Remont mieszkania w Lublinie — prace wykończeniowe" loading="lazy" />
+        <span class="svc-tag">Najczęściej wybierane</span>
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Remonty mieszkań</h3>
+        <p>Kompleksowe prace remontowe i wykończeniowe — od przygotowania powierzchni po finalne wykończenie.</p>
+      </article>
+
+      <article class="svc col-3">
+        <img src="assets/photos/gallery-01.jpeg" alt="Remont łazienki z płytkami lastryko w Lublinie" loading="lazy" />
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Remont łazienki</h3>
+        <p>Płytki, instalacje, zabudowy, montaż elementów i dopracowane detale.</p>
+      </article>
+
+      <article class="svc col-3">
+        <img src="assets/photos/gallery-08.jpeg" alt="Układanie płytek w łazience z lamelami drewnianymi" loading="lazy" />
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Układanie płytek</h3>
+        <p>Precyzyjnie w łazienkach, kuchniach, korytarzach i innych pomieszczeniach.</p>
+      </article>
+
+      <article class="svc col-2">
+        <img src="assets/photos/gallery-07.jpeg" alt="Układanie paneli i laminatu w korytarzu" loading="lazy" />
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Panele i laminat</h3>
+        <p>Równe wykończenia, listwy i detale.</p>
+      </article>
+
+      <article class="svc col-2">
+        <img src="assets/photos/gallery-10.jpeg" alt="Szpachlowanie i malowanie ścian po remoncie mieszkania" loading="lazy" />
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Szpachlowanie i malowanie</h3>
+        <p>Gładzie, przygotowanie ścian i malowanie wnętrz.</p>
+      </article>
+
+      <article class="svc col-2">
+        <img src="assets/photos/gallery-02.jpeg" alt="Projekt i wizualizacja nowoczesnej kuchni z wyspą" loading="lazy" />
+        <span class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <h3>Projekt i wizualizacje</h3>
+        <p>Pomoc w zaplanowaniu układu, stylu i rozwiązań przed startem.</p>
+      </article>
+    </div>
+
+    <div class="svc-cta reveal">
+      <p>Nie wiesz, od czego zacząć? Opisz krótko, czego potrzebujesz — wrócimy z konkretną odpowiedzią.</p>
+      <div class="sc-actions">
+        <button class="btn btn-primary" data-popup-open>Zostaw zgłoszenie</button>
+        <a href="tel:+48729405452" class="btn btn-ghost">Zadzwoń</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PRACE SPECJALISTYCZNE ======================= -->
+<section class="section" id="specjalistyczne">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Prace specjalistyczne</span>
+      <h2>Więcej niż standardowy remont</h2>
+      <p class="lead">Tam, gdzie zwykły wykonawca odsyła do kolejnej ekipy, my realizujemy całość — z uprawnieniami do prac instalacyjnych.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-card reveal">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <h4>Instalacja elektryczna</h4>
+        <p>Montaż i modernizacja instalacji elektrycznej.</p>
+        <span class="cert-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Certyfikat G1</span>
+      </div>
+      <div class="spec-card reveal d1">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span>
+        <h4>Instalacja wodna</h4>
+        <p>Montaż instalacji wodnej i podłączenia hydrauliczne.</p>
+      </div>
+      <div class="spec-card reveal d2">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></span>
+        <h4>Płyty gipsowo-kartonowe</h4>
+        <p>Zabudowy GK, sufity podwieszane i ścianki działowe.</p>
+      </div>
+      <div class="spec-card reveal d3">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span>
+        <h4>Montaż okien</h4>
+        <p>Wymiana i montaż okien wraz z obróbką.</p>
+      </div>
+      <div class="spec-card reveal">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M4 9h16"/><path d="M12 13c2 2 2 4 0 6-2-2-2-4 0-6z"/><rect x="4" y="6" width="16" height="15" rx="2"/></svg></span>
+        <h4>Ogrzewanie gazowe</h4>
+        <p>Podłączenie i uruchomienie ogrzewania gazowego.</p>
+        <span class="cert-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Certyfikat G3</span>
+      </div>
+      <div class="spec-card reveal d1">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="9" height="6" rx="1"/><rect x="13" y="7" width="9" height="6" rx="1"/><rect x="7" y="14" width="9" height="6" rx="1"/></svg></span>
+        <h4>Układanie kostki brukowej</h4>
+        <p>Podjazdy, ścieżki i powierzchnie zewnętrzne.</p>
+      </div>
+      <div class="spec-card reveal d2">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="8" y1="16" x2="8" y2="16"/></svg></span>
+        <h4>Meble na wymiar</h4>
+        <p>Zabudowy i meble dopasowane do pomieszczenia.</p>
+      </div>
+      <div class="spec-card reveal d3">
+        <span class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6l1 4-2 2c1 2.5 3 4.5 5.5 5.5l2-2 4 1v6c0 1-1 2-2 2A18 18 0 0 1 2 5c0-1 1-2 2-2z" opacity="0"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9l4-3 5 4 4-3 5 4"/></svg></span>
+        <h4>Ściany dekoracyjne</h4>
+        <p>Tynki dekoracyjne, lamele i efektowne wykończenia.</p>
+      </div>
+    </div>
+
+    <div class="spec-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      Certyfikaty <b style="color:var(--chartreuse);margin:0 4px">G1 i G3</b> oznaczają, że prace instalacyjne wykonujemy zgodnie z wymaganymi uprawnieniami — bezpiecznie i odpowiedzialnie.
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LICZBY ======================= -->
+<section class="section" id="liczby">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Liczby i fakty</span>
+      <h2>Konkrety, nie obietnice</h2>
+    </div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="s-num"><span data-count="5" data-suffix="">0</span><span class="star">★</span></div>
+        <div class="s-label">Ocena klientów</div>
+        <div class="s-desc">Opinie 5★ za jakość i kontakt</div>
+      </div>
+      <div class="stat reveal d1">
+        <div class="s-num">G1<span style="color:var(--muted)">/</span>G3</div>
+        <div class="s-label">Certyfikaty</div>
+        <div class="s-desc">Uprawnienia do prac instalacyjnych</div>
+      </div>
+      <div class="stat reveal d2">
+        <div class="s-num" style="font-size:clamp(1.7rem,3.4vw,2.4rem)">Lublin</div>
+        <div class="s-label">+ okolice</div>
+        <div class="s-desc">Główny obszar działania</div>
+      </div>
+      <div class="stat reveal d3">
+        <div class="s-num"><span data-count="0">0</span></div>
+        <div class="s-label">Niedokończonych prac</div>
+        <div class="s-desc">Każdy remont doprowadzony do końca</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REALIZACJE ======================= -->
+<section class="section" id="realizacje">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nasze realizacje</span>
+      <h2>Wykończenia, które <span class="serif-i">bronią się</span> w detalu</h2>
+      <p class="lead">Łazienki, mieszkania, kuchnie i prace wykończeniowe z Lublina i okolic.</p>
+    </div>
+
+    <div class="gal-filters reveal" id="galFilters">
+      <button class="chip active" data-filter="all">Wszystkie</button>
+      <button class="chip" data-filter="lazienki">Łazienki</button>
+      <button class="chip" data-filter="mieszkania">Mieszkania</button>
+      <button class="chip" data-filter="kuchnie">Kuchnie</button>
+      <button class="chip" data-filter="wykonczenia">Wykończenia</button>
+    </div>
+
+    <div class="gallery reveal" id="gallery">
+      <figure class="gal-item" data-cat="lazienki"><img src="assets/photos/gallery-01.jpeg" alt="Remont łazienki z płytkami lastryko w Lublinie" loading="lazy" /><figcaption class="gal-cap"><b>Łazienka z lastryko</b><span>Płytki, zabudowa i podświetlane lustro</span></figcaption></figure>
+      <figure class="gal-item" data-cat="kuchnie"><img src="assets/photos/gallery-02.jpeg" alt="Nowoczesna kuchnia z wyspą — wykończenie wnętrza" loading="lazy" /><figcaption class="gal-cap"><b>Kuchnia z wyspą</b><span>Wykończenie premium z oświetleniem LED</span></figcaption></figure>
+      <figure class="gal-item" data-cat="wykonczenia"><img src="assets/photos/gallery-03.jpeg" alt="Przedpokój z zabudową na wymiar i oświetleniem LED" loading="lazy" /><figcaption class="gal-cap"><b>Przedpokój z zabudową</b><span>Zabudowa GK i oświetlenie nastrojowe</span></figcaption></figure>
+      <figure class="gal-item" data-cat="mieszkania"><img src="assets/photos/gallery-04.jpeg" alt="Salon po remoncie z panelami i dekoracyjnymi ramami na ścianie" loading="lazy" /><figcaption class="gal-cap"><b>Salon po remoncie</b><span>Panele, ramy dekoracyjne, malowanie</span></figcaption></figure>
+      <figure class="gal-item" data-cat="kuchnie"><img src="assets/photos/gallery-05.jpeg" alt="Aneks kuchenny po remoncie z układaniem paneli" loading="lazy" /><figcaption class="gal-cap"><b>Aneks kuchenny</b><span>Układanie paneli i prace wykończeniowe</span></figcaption></figure>
+      <figure class="gal-item" data-cat="kuchnie"><img src="assets/photos/gallery-06.jpeg" alt="Kuchnia premium z wyspą i oświetleniem nastrojowym" loading="lazy" /><figcaption class="gal-cap"><b>Kuchnia premium</b><span>Drewno, kamień i zabudowa na wymiar</span></figcaption></figure>
+      <figure class="gal-item" data-cat="wykonczenia"><img src="assets/photos/gallery-07.jpeg" alt="Korytarz po remoncie z panelami dębowymi" loading="lazy" /><figcaption class="gal-cap"><b>Korytarz</b><span>Panele dębowe i białe drzwi</span></figcaption></figure>
+      <figure class="gal-item" data-cat="lazienki"><img src="assets/photos/gallery-08.jpeg" alt="Łazienka z kabiną prysznicową i lamelami drewnianymi" loading="lazy" /><figcaption class="gal-cap"><b>Łazienka z lamelami</b><span>Płytki, lamele i kabina prysznicowa</span></figcaption></figure>
+      <figure class="gal-item" data-cat="lazienki"><img src="assets/photos/gallery-09.jpeg" alt="Łazienka z umywalką i okrągłym lustrem — wykończenie" loading="lazy" /><figcaption class="gal-cap"><b>Łazienka z umywalką</b><span>Okrągłe lustro i drewniana szafka</span></figcaption></figure>
+      <figure class="gal-item" data-cat="mieszkania"><img src="assets/photos/gallery-10.jpeg" alt="Korytarz i drzwi po remoncie mieszkania w Lublinie" loading="lazy" /><figcaption class="gal-cap"><b>Drzwi i korytarz</b><span>Montaż drzwi i układanie paneli</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= OPINIE ======================= -->
+<section class="section" id="opinie">
+  <div class="container">
+    <div class="rev-top">
+      <div class="section-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">Opinie</span>
+        <h2>Co mówią klienci</h2>
+      </div>
+      <div class="rev-rating reveal d1">
+        <div class="rr-num">5,0</div>
+        <div>
+          <div class="rr-stars">★★★★★</div>
+          <div class="rr-sub">Opinie klientów BIG-MARK</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider reveal" id="slider">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <div class="rev-card">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text">Bardzo dobry kontakt i konkretne podejście do pracy. Wszystko było ustalone wcześniej, a remont przebiegł bez niepotrzebnych problemów.</p>
+            <div class="rev-author"><span class="ra-av">M</span><div><b>Marta</b><span>Remont mieszkania, Lublin</span></div></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="rev-card">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text">Łazienka wykonana dokładnie, z dużą dbałością o szczegóły. Widać, że wykonawca nie zostawia rzeczy na później.</p>
+            <div class="rev-author"><span class="ra-av">K</span><div><b>Krzysztof</b><span>Remont łazienki, okolice Lublina</span></div></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="rev-card">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text">Pomoc przy wyborze rozwiązań bardzo nam się przydała. Prace wykonane sprawnie i bez niespodzianek.</p>
+            <div class="rev-author"><span class="ra-av">A</span><div><b>Anna</b><span>Wykończenie wnętrza, Lublin</span></div></div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="rev-card">
+            <div class="quote-mark">&ldquo;</div>
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text">Polecam za komunikację i solidność. Tam, gdzie inni nie chcieli się podjąć, BIG-MARK znalazł rozwiązanie.</p>
+            <div class="rev-author"><span class="ra-av">P</span><div><b>Paweł</b><span>Prace specjalistyczne, Lubelskie</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <div class="slider-dots" id="dots"></div>
+        <div class="slider-arrows">
+          <button class="s-arrow" id="prevBtn" aria-label="Poprzednia opinia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="s-arrow" id="nextBtn" aria-label="Następna opinia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px" class="reveal">
+      <a href="https://maps.app.goo.gl/YjLMa37nWnJyZ9iv7" target="_blank" rel="noopener" class="btn btn-dark btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Zobacz opinie w Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ZOSTAW ZGŁOSZENIE ======================= -->
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="lead-grid">
+      <div class="lead-info reveal">
+        <span class="eyebrow">Zostaw zgłoszenie</span>
+        <h2>Opisz, co chcesz zrobić — wrócimy z konkretną odpowiedzią</h2>
+        <p>Remont łazienki, mieszkania, płytki, instalacje, zabudowy czy pojedyncza praca? Napisz krótko, czego potrzebujesz.</p>
+        <ul class="lead-args">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Odpowiadamy szybko</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Doradzamy rozwiązanie</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Dopasowujemy zakres do budżetu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Pracujemy bez ukrytych niespodzianek</li>
+        </ul>
+        <div class="lead-direct">
+          <a href="tel:+48729405452" class="btn btn-ghost" style="color:var(--cream);border-color:rgba(255,255,255,.25)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+            Zadzwoń
+          </a>
+          <a href="https://wa.me/48729405452" target="_blank" rel="noopener" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.207z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="lead-form reveal d1">
+        <form class="lead-form-el" novalidate>
+          <div class="form-field">
+            <label>Imię <span class="req">*</span></label>
+            <input type="text" name="name" autocomplete="given-name" placeholder="Jak się do Ciebie zwracać?" />
+            <span class="err-msg">Podaj imię.</span>
+          </div>
+          <div class="form-field">
+            <label>Telefon <span class="req">*</span></label>
+            <input type="tel" name="phone" autocomplete="tel" placeholder="np. 729 405 452" />
+            <span class="err-msg">Podaj poprawny numer telefonu.</span>
+          </div>
+          <div class="form-field">
+            <label>Wiadomość</label>
+            <textarea name="message" placeholder="Napisz krótko, czego potrzebujesz — np. remont łazienki 6 m², płytki i kabina."></textarea>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="privacy" />
+            <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span>Akceptuję <a href="#" data-privacy-open>politykę prywatności</a>.</span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Wyślij zgłoszenie</button>
+        </form>
+        <div class="form-success">
+          <div class="fs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Dziękujemy</h3>
+          <p>Zgłoszenie zostało przygotowane — skontaktujemy się z Tobą możliwie szybko.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-aside reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:16px">Szybkie odpowiedzi na najczęstsze pytania</h2>
+        <p class="lead" style="color:var(--muted);margin-top:16px">Masz inne pytanie? Zadzwoń lub napisz — bez zobowiązań.</p>
+        <button class="btn btn-dark" data-popup-open>Zadaj pytanie</button>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Ile kosztuje remont? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Cena zależy od zakresu prac, metrażu, materiałów i terminu. Po krótkiej rozmowie lub oględzinach przygotowujemy jasną wycenę i dobieramy rozwiązania pod Twój budżet.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Ile trwa wykonanie prac? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Termin zależy od zakresu remontu. Pracujemy sprawnie, ale bez pośpiechu kosztem jakości. Przed startem ustalamy realny harmonogram, żeby uniknąć niespodzianek.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Czy pracujecie tylko w Lublinie? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Głównie działamy w Lublinie i okolicach, ale przy większych realizacjach możemy omówić pracę również w innych częściach Polski.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Czy można zamówić tylko jedną usługę? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Tak. Możesz zlecić zarówno kompleksowy remont mieszkania, jak i pojedyncze prace: łazienkę, płytki, malowanie, elektrykę, hydraulikę, zabudowy GK, montaż okien czy meble na wymiar.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Czy pomagacie z doborem materiałów? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Tak. Pomagamy dobrać materiały, rozwiązania techniczne i warianty wykończenia tak, aby pasowały do budżetu, stylu i codziennego użytkowania.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Czy można najpierw zadać pytanie bez zamawiania remontu? <span class="faq-plus"></span></button>
+          <div class="faq-a"><p>Tak. Możesz zadzwonić, napisać na WhatsApp albo wysłać formularz. Krótko omówimy sytuację i podpowiemy, jakie rozwiązanie będzie najlepsze.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <span class="brand-name">BIG<span>-MARK</span></span>
+        <p class="footer-about">Wykonawca remontowo-budowlany z Lublina. Remonty mieszkań, łazienek i prace wykończeniowe prowadzone dokładnie, spokojnie i do końca.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/g/1EL1bzxpEm/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="https://wa.me/48729405452" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></a>
+          <a href="https://maps.app.goo.gl/YjLMa37nWnJyZ9iv7" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nawigacja</h4>
+        <ul>
+          <li><a href="#dlaczego">Dlaczego my</a></li>
+          <li><a href="#uslugi">Usługi</a></li>
+          <li><a href="#specjalistyczne">Prace specjalistyczne</a></li>
+          <li><a href="#realizacje">Realizacje</a></li>
+          <li><a href="#opinie">Opinie</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4>Kontakt</h4>
+        <a href="tel:+48729405452"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg> +48 729 405 452</a>
+        <a href="mailto:vmtkavenko@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> vmtkavenko@gmail.com</a>
+        <a href="https://wa.me/48729405452" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg> WhatsApp</a>
+        <a href="https://maps.app.goo.gl/YjLMa37nWnJyZ9iv7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lublin, Lubelskie</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Lokalizacja</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=Lublin%2C%20Lubelskie&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa — Lublin, Lubelskie"></iframe>
+        </div>
+        <a href="https://maps.app.goo.gl/YjLMa37nWnJyZ9iv7" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;color:var(--chartreuse);font-weight:600;font-size:.9rem">Otwórz mapę i opinie →</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> BIG-MARK · Remonty mieszkań Lublin</span>
+      <a href="#" data-privacy-open>Polityka prywatności</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= STICKY MOBILE CTA ======================= -->
+<div class="mobile-cta">
+  <button class="btn btn-primary" data-popup-open>Zostaw zgłoszenie</button>
+  <a href="https://wa.me/48729405452" target="_blank" rel="noopener" class="btn btn-wa btn-call" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></a>
+  <a href="tel:+48729405452" class="btn btn-dark btn-call" aria-label="Zadzwoń"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></a>
+</div>
+
+<!-- ======================= FLOATING WIDGET (desktop) ======================= -->
+<div class="fab-wrap" id="fabWrap">
+  <div class="fab-mini">
+    <a href="https://wa.me/48729405452" target="_blank" rel="noopener" class="fb-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg></a>
+    <a href="tel:+48729405452" class="fb-call" aria-label="Zadzwoń"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.74a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  </div>
+  <button class="fab-main" id="fabMain" aria-label="Szybki kontakt">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Szybki kontakt
+    <svg class="fab-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</div>
+
+<!-- ======================= POPUP ======================= -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <button class="popup-close" id="popupClose" aria-label="Zamknij">&times;</button>
+    <span class="eyebrow">Zostaw zgłoszenie</span>
+    <h3 id="popupTitle">Opowiedz o swoim remoncie</h3>
+    <p class="popup-sub">Napisz krótko, czego potrzebujesz — wrócimy z konkretną odpowiedzią.</p>
+    <form class="lead-form-el" novalidate>
+      <div class="form-field">
+        <label>Imię <span class="req">*</span></label>
+        <input type="text" name="name" autocomplete="given-name" placeholder="Jak się do Ciebie zwracać?" />
+        <span class="err-msg">Podaj imię.</span>
+      </div>
+      <div class="form-field">
+        <label>Telefon <span class="req">*</span></label>
+        <input type="tel" name="phone" autocomplete="tel" placeholder="np. 729 405 452" />
+        <span class="err-msg">Podaj poprawny numer telefonu.</span>
+      </div>
+      <div class="form-field">
+        <label>Wiadomość</label>
+        <textarea name="message" placeholder="Np. remont łazienki, płytki, kabina prysznicowa."></textarea>
+      </div>
+      <label class="check">
+        <input type="checkbox" name="privacy" />
+        <span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <span>Akceptuję <a href="#" data-privacy-open>politykę prywatności</a>.</span>
+      </label>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Wyślij zgłoszenie</button>
+    </form>
+    <div class="form-success">
+      <div class="fs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3>Dziękujemy</h3>
+      <p>Zgłoszenie zostało przygotowane — skontaktujemy się z Tobą możliwie szybko.</p>
+    </div>
+    <p class="popup-alt">albo od razu <a href="tel:+48729405452">zadzwoń</a> lub <a href="https://wa.me/48729405452" target="_blank" rel="noopener">napisz na WhatsApp</a></p>
+  </div>
+</div>
+
+<!-- ======================= PRIVACY MODAL ======================= -->
+<div class="privacy-overlay" id="privacyOverlay">
+  <div class="privacy-box" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <button class="popup-close" id="privacyClose" aria-label="Zamknij">&times;</button>
+    <span class="eyebrow">Dokument</span>
+    <h3 id="privacyTitle" style="margin-top:10px">Polityka prywatności</h3>
+    <h4>Administrator danych</h4>
+    <p>Administratorem danych osobowych jest BIG-MARK, wykonawca remontowo-budowlany z siedzibą w Lublinie (Lubelskie). Kontakt: tel. +48 729 405 452, e-mail vmtkavenko@gmail.com.</p>
+    <h4>Zakres i cel przetwarzania</h4>
+    <p>Dane podane w formularzu kontaktowym (imię, numer telefonu oraz treść wiadomości) przetwarzamy wyłącznie w celu:</p>
+    <ul>
+      <li>kontaktu zwrotnego i odpowiedzi na zgłoszenie,</li>
+      <li>przygotowania wyceny i ustalenia zakresu prac,</li>
+      <li>realizacji uzgodnionej usługi remontowej.</li>
+    </ul>
+    <h4>Podstawa prawna</h4>
+    <p>Dane przetwarzamy na podstawie Twojej zgody oraz w celu podjęcia działań przed zawarciem umowy, zgodnie z RODO (art. 6 ust. 1 lit. a i b).</p>
+    <h4>Okres przechowywania</h4>
+    <p>Dane przechowujemy przez czas niezbędny do obsługi zgłoszenia i realizacji usługi, a po jej zakończeniu przez okres wynikający z przepisów prawa.</p>
+    <h4>Twoje prawa</h4>
+    <p>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wycofania zgody w dowolnym momencie. W tym celu skontaktuj się z nami telefonicznie lub mailowo.</p>
+    <h4>Udostępnianie danych</h4>
+    <p>Nie sprzedajemy ani nie udostępniamy danych osobom trzecim w celach marketingowych. Dane mogą być powierzone wyłącznie podmiotom wspierającym realizację usługi, w niezbędnym zakresie.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Header hide/show on scroll ---------- */
+  var header = document.getElementById('header');
+  var lastY = window.pageYOffset;
+  var ticking = false;
+  function onScroll(){
+    var y = window.pageYOffset;
+    header.classList.toggle('scrolled', y > 20);
+    if(y > 240 && y > lastY + 4){
+      header.classList.add('hidden');           // scrolling down
+    } else if(y < lastY - 4 || y < 240){
+      header.classList.remove('hidden');         // scrolling up / near top
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ window.requestAnimationFrame(onScroll); ticking = true; }
+  }, {passive:true});
+
+  /* ---------- Mobile menu ---------- */
+  var burger = document.getElementById('burger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mmClose = document.getElementById('mmClose');
+  function openMenu(){ mobileMenu.classList.add('open'); burger.classList.add('open'); burger.setAttribute('aria-expanded','true'); mobileMenu.setAttribute('aria-hidden','false'); document.body.classList.add('no-scroll'); }
+  function closeMenu(){ mobileMenu.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); mobileMenu.setAttribute('aria-hidden','true'); document.body.classList.remove('no-scroll'); }
+  burger.addEventListener('click', openMenu);
+  mmClose.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* ---------- Popup ---------- */
+  var popupOverlay = document.getElementById('popupOverlay');
+  var popupClose = document.getElementById('popupClose');
+  function openPopup(){ popupOverlay.classList.add('open'); document.body.classList.add('no-scroll'); closeMenu(); fabWrap.classList.remove('open'); }
+  function closePopup(){ popupOverlay.classList.remove('open'); document.body.classList.remove('no-scroll'); }
+  document.querySelectorAll('[data-popup-open]').forEach(function(b){ b.addEventListener('click', function(e){ e.preventDefault(); openPopup(); }); });
+  popupClose.addEventListener('click', closePopup);
+  popupOverlay.addEventListener('click', function(e){ if(e.target === popupOverlay) closePopup(); });
+
+  /* ---------- Privacy modal ---------- */
+  var privacyOverlay = document.getElementById('privacyOverlay');
+  var privacyClose = document.getElementById('privacyClose');
+  document.querySelectorAll('[data-privacy-open]').forEach(function(b){ b.addEventListener('click', function(e){ e.preventDefault(); privacyOverlay.classList.add('open'); document.body.classList.add('no-scroll'); }); });
+  function closePrivacy(){ privacyOverlay.classList.remove('open'); if(!popupOverlay.classList.contains('open')) document.body.classList.remove('no-scroll'); }
+  privacyClose.addEventListener('click', closePrivacy);
+  privacyOverlay.addEventListener('click', function(e){ if(e.target === privacyOverlay) closePrivacy(); });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(privacyOverlay.classList.contains('open')) closePrivacy();
+      else if(popupOverlay.classList.contains('open')) closePopup();
+      else if(mobileMenu.classList.contains('open')) closeMenu();
+    }
+  });
+
+  /* ---------- Floating widget (desktop) ---------- */
+  var fabWrap = document.getElementById('fabWrap');
+  var fabMain = document.getElementById('fabMain');
+  fabMain.addEventListener('click', function(){ fabWrap.classList.toggle('open'); });
+  document.addEventListener('click', function(e){ if(!fabWrap.contains(e.target)) fabWrap.classList.remove('open'); });
+
+  /* ---------- Form validation + success ---------- */
+  function validatePhone(v){ var digits = (v || '').replace(/[^0-9]/g,''); return digits.length >= 9; }
+  document.querySelectorAll('.lead-form-el').forEach(function(form){
+    var wrap = form.parentElement;
+    var success = wrap.querySelector('.form-success');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var ok = true;
+      var nameField = form.querySelector('input[name="name"]').closest('.form-field');
+      var phoneInput = form.querySelector('input[name="phone"]');
+      var phoneField = phoneInput.closest('.form-field');
+      var checkLabel = form.querySelector('.check');
+      var checkInput = checkLabel.querySelector('input[name="privacy"]');
+
+      if(!nameField.querySelector('input').value.trim()){ nameField.classList.add('error'); ok = false; } else nameField.classList.remove('error');
+      if(!validatePhone(phoneInput.value)){ phoneField.classList.add('error'); ok = false; } else phoneField.classList.remove('error');
+      if(!checkInput.checked){ checkLabel.classList.add('error'); ok = false; } else checkLabel.classList.remove('error');
+
+      if(!ok){
+        var firstErr = form.querySelector('.error');
+        if(firstErr){ var inp = firstErr.querySelector('input'); if(inp) inp.focus(); }
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('show');
+      var alt = wrap.querySelector('.popup-alt');
+      if(alt) alt.style.display = 'none';
+    });
+    /* clear error state on input */
+    form.querySelectorAll('input, textarea').forEach(function(el){
+      el.addEventListener('input', function(){
+        var f = el.closest('.form-field'); if(f) f.classList.remove('error');
+        var c = el.closest('.check'); if(c) c.classList.remove('error');
+      });
+      el.addEventListener('change', function(){
+        var c = el.closest('.check'); if(c && el.checked) c.classList.remove('error');
+      });
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(other){
+        if(other !== item){ other.classList.remove('open'); other.querySelector('.faq-a').style.maxHeight = null; other.querySelector('.faq-q').setAttribute('aria-expanded','false'); }
+      });
+      if(isOpen){ item.classList.remove('open'); a.style.maxHeight = null; q.setAttribute('aria-expanded','false'); }
+      else { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; q.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  /* ---------- Testimonial slider ---------- */
+  var slidesEl = document.getElementById('slides');
+  var slideNodes = slidesEl.children;
+  var dotsWrap = document.getElementById('dots');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var index = 0, autoTimer = null;
+  function perView(){ return window.innerWidth >= 760 ? 2 : 1; }
+  function maxIndex(){ return Math.max(0, slideNodes.length - perView()); }
+  function buildDots(){
+    dotsWrap.innerHTML = '';
+    for(var i=0;i<=maxIndex();i++){
+      var d = document.createElement('button');
+      d.className = 's-dot' + (i===index?' active':'');
+      d.setAttribute('aria-label','Opinia ' + (i+1));
+      (function(n){ d.addEventListener('click', function(){ index = n; update(); restart(); }); })(i);
+      dotsWrap.appendChild(d);
+    }
+  }
+  function update(){
+    if(index > maxIndex()) index = maxIndex();
+    var pct = (100 / perView()) * index;
+    slidesEl.style.transform = 'translateX(-' + pct + '%)';
+    Array.prototype.forEach.call(dotsWrap.children, function(d,i){ d.classList.toggle('active', i===index); });
+  }
+  function next(){ index = index >= maxIndex() ? 0 : index + 1; update(); }
+  function prev(){ index = index <= 0 ? maxIndex() : index - 1; update(); }
+  function restart(){ if(autoTimer){ clearInterval(autoTimer); } autoTimer = setInterval(next, 6000); }
+  nextBtn.addEventListener('click', function(){ next(); restart(); });
+  prevBtn.addEventListener('click', function(){ prev(); restart(); });
+  window.addEventListener('resize', function(){ buildDots(); update(); });
+  buildDots(); update(); restart();
+
+  /* ---------- Gallery filter ---------- */
+  var filters = document.getElementById('galFilters');
+  var galItems = document.querySelectorAll('#gallery .gal-item');
+  filters.addEventListener('click', function(e){
+    var btn = e.target.closest('.chip'); if(!btn) return;
+    filters.querySelector('.chip.active').classList.remove('active');
+    btn.classList.add('active');
+    var f = btn.getAttribute('data-filter');
+    galItems.forEach(function(item){
+      var show = (f === 'all' || item.getAttribute('data-cat') === f);
+      item.classList.toggle('hide', !show);
+    });
+  });
+
+  /* ---------- Counters ---------- */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if(target === 0){ el.textContent = '0'; return; }
+    var dur = 1100, start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(p * target).toString();
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ---------- Reveal on scroll + counters ---------- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ animateCount(en.target); co.unobserve(en.target); }
+      });
+    }, {threshold:0.5});
+    document.querySelectorAll('[data-count]').forEach(function(el){ co.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('[data-count]').forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+  }
+
+  /* ---------- Year ---------- */
+  var yEl = document.getElementById('year');
+  if(yEl){ yEl.textContent = (new Date()).getFullYear(); }
+
+})();
+</script>
+</body>
+</html>

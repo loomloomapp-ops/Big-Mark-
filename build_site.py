@@ -90,15 +90,27 @@ for tag in soup.find_all(style=True):
 # =====================================================================
 html_tag = soup.find("html")
 if html_tag: html_tag["lang"] = "pl"
-if soup.title: soup.title.string = "BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin"
+SITE_TITLE = "BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin"
+SITE_DESC = ("Remonty mieszkań, łazienek, układanie płytek, elektryka G1, ogrzewanie gazowe G3 "
+             "i prace wykończeniowe w Lublinie i okolicach. Zostaw zgłoszenie do BIG-MARK.")
+OG_IMAGE = "assets/og-image.jpg"
+if soup.title: soup.title.string = SITE_TITLE
 for m in soup.find_all("meta"):
-    if m.get("name") == "description" or m.get("property") == "og:description":
-        m["content"] = ("Remonty mieszkań, łazienek, układanie płytek, elektryka G1, ogrzewanie gazowe G3 "
-                        "i prace wykończeniowe w Lublinie i okolicach. Zostaw zgłoszenie do BIG-MARK.")
-    if m.get("property") == "og:title":
-        m["content"] = "BIG-MARK — Remonty mieszkań i wykończenia wnętrz Lublin"
-    if m.get("property") in ("og:image",) and m.get("content"):
-        m["content"] = PH(1)
+    prop = m.get("property"); name = m.get("name")
+    if name == "description" or prop == "og:description" or name == "twitter:description":
+        m["content"] = SITE_DESC
+    if prop == "og:title" or name == "twitter:title":
+        m["content"] = SITE_TITLE
+    # brand OG/Twitter card image (was a Flampt photo / leftover CDN url)
+    if prop == "og:image" or name in ("twitter:image", "twitter:image:src"):
+        m["content"] = OG_IMAGE
+# ensure the OG image dimensions + alt are present (good social previews)
+_head_og = soup.head
+_have = {m.get("property") for m in soup.find_all("meta")}
+for _p, _c in (("og:image:width", "1200"), ("og:image:height", "630"),
+               ("og:image:alt", "BIG-MARK — Remonty mieszkań, Lublin")):
+    if _p not in _have:
+        _t = soup.new_tag("meta"); _t["property"] = _p; _t["content"] = _c; _head_og.append(_t)
 
 # ---------- favicon: BIG-MARK emblem (replaces the template's Flampt icons) ----------
 for link in soup.find_all("link"):
